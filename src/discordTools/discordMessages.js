@@ -66,9 +66,11 @@ module.exports = {
         const message = await module.exports.sendMessage(guildId, content, server.messageId,
             instance.channelId.servers, interaction);
 
-        if (!interaction) {
-            instance.serverList[serverId].messageId = message.id;
-            Client.client.setInstance(guildId, instance);
+        if (message.id != undefined) {
+            if (!interaction) {
+                instance.serverList[serverId].messageId = message.id;
+                Client.client.setInstance(guildId, instance);
+            }
         }
     },
 
@@ -84,9 +86,11 @@ module.exports = {
         const message = await module.exports.sendMessage(guildId, content, tracker.messageId,
             instance.channelId.trackers, interaction);
 
-        if (!interaction) {
-            instance.trackers[trackerId].messageId = message.id;
-            Client.client.setInstance(guildId, instance);
+        if (message.id != undefined) {
+            if (!interaction) {
+                instance.trackers[trackerId].messageId = message.id;
+                Client.client.setInstance(guildId, instance);
+            }
         }
     },
 
@@ -110,9 +114,11 @@ module.exports = {
         const message = await module.exports.sendMessage(guildId, content, entity.messageId,
             instance.channelId.switches, interaction);
 
-        if (!interaction) {
-            instance.serverList[serverId].switches[entityId].messageId = message.id;
-            Client.client.setInstance(guildId, instance);
+        if (message.id != undefined) {
+            if (!interaction) {
+                instance.serverList[serverId].switches[entityId].messageId = message.id;
+                Client.client.setInstance(guildId, instance);
+            }
         }
     },
 
@@ -132,9 +138,11 @@ module.exports = {
         const message = await module.exports.sendMessage(guildId, content, entity.messageId,
             instance.channelId.alarms, interaction);
 
-        if (!interaction) {
-            instance.serverList[serverId].alarms[entityId].messageId = message.id;
-            Client.client.setInstance(guildId, instance);
+        if (message.id != undefined) {
+            if (!interaction) {
+                instance.serverList[serverId].alarms[entityId].messageId = message.id;
+                Client.client.setInstance(guildId, instance);
+            }
         }
     },
 
@@ -159,9 +167,11 @@ module.exports = {
         const message = await module.exports.sendMessage(guildId, content, entity.messageId,
             instance.channelId.storageMonitors, interaction);
 
-        if (!interaction) {
-            instance.serverList[serverId].storageMonitors[entityId].messageId = message.id;
-            Client.client.setInstance(guildId, instance);
+        if (message.id != undefined) {
+            if (!interaction) {
+                instance.serverList[serverId].storageMonitors[entityId].messageId = message.id;
+                Client.client.setInstance(guildId, instance);
+            }
         }
     },
 
@@ -179,9 +189,11 @@ module.exports = {
         const message = await module.exports.sendMessage(guildId, content, group.messageId,
             instance.channelId.switchGroups, interaction);
 
-        if (!interaction) {
-            instance.serverList[serverId].switchGroups[groupId].messageId = message.id;
-            Client.client.setInstance(guildId, instance);
+        if (message.id != undefined) {
+            if (!interaction) {
+                instance.serverList[serverId].switchGroups[groupId].messageId = message.id;
+                Client.client.setInstance(guildId, instance);
+            }
         }
     },
 
